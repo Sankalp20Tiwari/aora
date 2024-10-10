@@ -44,7 +44,7 @@ const TabsLayout = () => {
                     focused={focused}
                     />
              ) }} />
-        <Tabs.Screen 
+        {/* <Tabs.Screen 
          name="bookmark"
          options={{
              title: 'Bookmark',
@@ -56,7 +56,7 @@ const TabsLayout = () => {
                     name="Bookmark"
                     focused={focused}
                     />
-             ) }} />
+             ) }} /> */}
              <Tabs.Screen 
          name="create"
          options={{
