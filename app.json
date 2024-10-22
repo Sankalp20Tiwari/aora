@@ -13,7 +13,8 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.sankalp.aora"
     },
     "android": {
       "adaptiveIcon": {
@@ -21,7 +22,6 @@
         "backgroundColor": "#ffffff"
       },
       "package": "com.sankalp.aora"
-      
     },
     "web": {
       "bundler": "metro",
@@ -33,6 +33,17 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "033007b7-30ed-415e-92d9-6340cb6a78c1"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/033007b7-30ed-415e-92d9-6340cb6a78c1"
     }
   }
 }
