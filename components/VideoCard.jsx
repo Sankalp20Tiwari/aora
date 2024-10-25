@@ -1,27 +1,32 @@
 // VideoCard.js
-import { View, Text, Image, TouchableOpacity } from 'react-native';
+import { View, Text, Image, TouchableOpacity, Alert } from 'react-native';
 import React, { useState } from 'react';
 import { icons } from '../constants';
 import { ResizeMode, Video } from 'expo-av';
 import { useGlobalContext } from '../context/GlobalProvider';
 import { addBookmark } from '../lib/appwrite';
+import Modal from 'react-native-modal';
 
 
 const VideoCard = ({ video }) => {
     const { title, thumbnail, video: videoUri, creator: { username, avatar } } = video;
     const [play, setPlay] = useState(false);
     const { user } = useGlobalContext();
+    const [isModalVisible, setModalVisible] = useState(false);
 
     const handleBookmark = async () => {
         if (!user) {
-            alert('Please log in to bookmark videos');
+            Alert.alert('Please log in to bookmark videos');
+            setModalVisible(true); // Show the modal
             return;
         }
     
         try {
             await addBookmark(user.$id, video); // Pass the entire video object
-            alert('Video bookmarked successfully!');
-            onBookmarkAdded(video); // Optionally refresh bookmarks here
+            setModalVisible(true); // Optionally refresh bookmarks here
+            // Alert.alert('Video bookmarked successfully!');
+            onBookmarkAdded(video); 
+            // Optionally refresh bookmarks here
         } catch (error) {
            
         }
@@ -86,6 +91,14 @@ const VideoCard = ({ video }) => {
                     </TouchableOpacity>
                 )
             }
+             <Modal isVisible={isModalVisible} onBackdropPress={() => setModalVisible(false)}>
+                <View  className="bg-primary p-5 rounded-lg items-center">
+                    <Text className="text-lg text-white mb-2" >Video bookmarked successfully!</Text>
+                    <TouchableOpacity className=" bg-black-100 p-2 rounded"  onPress={() => setModalVisible(false)}>
+                        <Text  className="text-white font-bold">OK</Text>
+                    </TouchableOpacity>
+                </View>
+            </Modal>
         </View>
     );
 };
