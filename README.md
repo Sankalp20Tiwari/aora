@@ -4,11 +4,14 @@
 AORA is a modern web application built using React Native and Expo, designed for seamless authentication and content browsing. The project integrates Appwrite for backend services, enabling secure authentication, data storage, and management.
 
 ## 🖼️ Preview
-![landingScreen](public/landingScreen.png)
-![home](public/Home.png)
-![create](public/Create.png)
-![bookmark](public/bookmarkTab.png)
-![profile](public/Profile.png)
+<div align="center" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+  <img src="public/landingScreen.png" width="250" height="200"/>
+  <img src="public/Home.png" width="250"/>
+  <img src="public/Create.png" width="250"/>
+  <br/>
+  <img src="public/bookmarkTab.png" width="250"/>
+  <img src="public/Profile.png" width="250"/>
+</div>
 
 ## ✨ Features
 - **Authentication System**: Secure login and signup using Appwrite.
