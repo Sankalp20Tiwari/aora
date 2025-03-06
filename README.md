@@ -1,50 +1,97 @@
-# Welcome to your Expo app 👋
+# AORA
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## 📌 Project Overview
+AORA is a modern web application built using React Native and Expo, designed for seamless authentication and content browsing. The project integrates Appwrite for backend services, enabling secure authentication, data storage, and management.
 
-## Get started
+## 🖼️ Preview
+![landingScreen](public/landingScreen.png)
+![home](public/Home.png)
+![create](public/Create.png)
+![bookmark](public/bookmarkTab.png)
+![profile](public/Profile.png)
 
-1. Install dependencies
+## ✨ Features
+- **Authentication System**: Secure login and signup using Appwrite.
+- **Search Functionality**: Users can search for content effortlessly.
+- **Bookmarking**: Save favorite items for easy access later.
+- **Trending Section**: Showcases trending content dynamically.
+- **Custom UI Components**: Reusable UI components for a better user experience.
+- **Dark Mode Support**: Aesthetic and user-friendly UI with dark theme compatibility.
 
-   ```bash
+## 🛠 Tech Stack
+- **Frontend**: React Native, Expo
+- **Backend**: Appwrite
+- **State Management**: Context API
+- **UI/Styling**: Tailwind CSS (or equivalent styling approach)
+- **Navigation**: React Navigation
+
+## 🚀 Installation & Setup
+### Prerequisites
+Ensure you have the following installed on your system:
+- Node.js
+- Expo CLI
+- Appwrite (Cloud or Self-hosted)
+
+### Steps to Run Locally
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/Sankalp20Tiwari/aora.git
+   cd aora
+   ```
+2. Install dependencies:
+   ```sh
    npm install
    ```
-
-2. Start the app
-
-   ```bash
-    npx expo start
+3. Configure Appwrite credentials in `lib/appwrite.js`:
+   ```js
+  export const appwriteConfig = {
+  endpoint : '',
+  platform: '',
+  projectId: "",
+  databaseId: "",
+  userCollectionId: "",
+  videoCollectionId:"",
+  storageId: "",
+  bookmarkCollectionId: ""
+  }
+   ```
+4. Start the development server:
+   ```sh
+   expo start
    ```
 
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+## 📁 Folder Structure
+```
+AORA/
+│── app/
+│   ├── (auth)/          # Authentication screens (Sign-in, Sign-up)
+│   ├── (tabs)/          # Tab navigation components
+│   ├── search/          # Search-related UI
+│   ├── assets/          # Static assets (images, icons)
+│── components/          # Reusable UI components
+│── constants/           # Constants like icons and images
+│── context/             # Context API providers
+│── lib/                 # Appwrite configuration & hooks
+│── node_modules/        # Dependencies
+│── package.json         # Project metadata and dependencies
+│── app.json             # Expo configuration
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 🎯 Usage
+- Run the application and navigate through the authentication system.
+- Search for content using the search feature.
+- Bookmark content for later access.
+- View trending content dynamically.
 
-## Learn more
+## 🤝 Contributing
+Contributions are welcome! Follow these steps:
+1. Fork the repository.
+2. Create a new branch: `git checkout -b feature-name`
+3. Make your changes and commit: `git commit -m "Added new feature"`
+4. Push changes: `git push origin feature-name`
+5. Submit a pull request.
 
-To learn more about developing your project with Expo, look at the following resources:
+---
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Feel free to update the repository link and Appwrite credentials as needed!
 
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
