@@ -5,7 +5,7 @@ AORA is a modern web application built using React Native and Expo, designed for
 
 ## 🖼️ Preview
 <div align="center" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
-  <img src="public/landingScreen.png" width="250" height="200"/>
+  <img src="public/landingScreen.png" width="250"/>
   <img src="public/Home.png" width="250"/>
   <img src="public/Create.png" width="250"/>
   <br/>
